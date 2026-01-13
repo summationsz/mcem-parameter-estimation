@@ -294,10 +294,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📧 Contact
 
-**Author:** Your Name  
-**Email:** your.email@university.edu  
-**Thesis Advisor:** Advisor Name  
-**Institution:** Your University, Department of Chemistry
+**Author:** John Gabriel M. Gali
+**Email:** johngabrielmgali@iskolarngbayan.pup.edu.ph  
+**Thesis Advisor:** Dr. Erickson Fajikulay  
+**Institution:** Polytechnic University of the Philippines Sta. Mesa Manila
 
 ---
 
