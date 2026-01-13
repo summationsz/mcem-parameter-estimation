@@ -267,12 +267,13 @@ This is a thesis research project. For questions or collaboration inquiries, ple
 If you use this work in your research, please cite:
 
 ```bibtex
-@thesis{yourname2026,
-  author = {Your Name},
-  title = {Enhancing Kinetic Parameter Identifiability in Biochemical Networks via Expectation Maximization},
-  school = {Your University},
+@thesis{Gali 2026,
+  author = {John Gabriel M. Gali},
+  title = {Enhancing Kinetic Parameter Identifiability in Biochemical Networks via 
+Expectation Maximization: A Case Study on Central Carbon Metabolism},
+  school = {Polytechnic University of the Philippines},
   year = {2026},
-  type = {Bachelor's Thesis}
+  type = {Undergraduate Thesis}
 }
 ```
 
