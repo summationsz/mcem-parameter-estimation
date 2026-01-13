@@ -1,0 +1,396 @@
+================================================================================
+GITHUB PREPARATION - CLEANUP GUIDE
+================================================================================
+Folder: C:\Users\gabsg\Downloads\For thesis\1 2026 Test Runs\MCEM Press Release
+
+This guide will help you prepare your Phase 6 2.0 folder for GitHub upload.
+
+================================================================================
+STEP 1: CREATE THE NEW FOLDER
+================================================================================
+
+1. Create new folder:
+   C:\Users\gabsg\Downloads\For thesis\1 2026 Test Runs\MCEM Press Release
+
+2. This will be your clean GitHub-ready folder
+
+================================================================================
+STEP 2: COPY ESSENTIAL FILES
+================================================================================
+
+FROM: C:\Users\gabsg\Downloads\For thesis\1 2026 Test Runs\Phase 6 2.0
+TO:   C:\Users\gabsg\Downloads\For thesis\1 2026 Test Runs\MCEM Press Release
+
+COPY THESE FILES (Core Python Scripts):
+----------------------------------------
+✓ Phase6_2.0_MAIN_WITH_TEST.py
+✓ phase6_parameter_estimation.py
+✓ phase6_robustness.py
+✓ phase6_bayesian_fispo.py
+✓ phase6_complete_analysis.py
+✓ phase6_generate_report.py
+✓ generate_thesis_visualizations.py
+✓ export_data_tables.py
+✓ glycolysis_model.py
+✓ tca_model.py
+✓ my_mcem_fixed.py
+✓ kinetic_parameters.py
+✓ add_true_params.py
+
+COPY THESE FOLDERS (Database Structure):
+-----------------------------------------
+✓ Bio-Database/
+  ✓ BACTERIA/
+    ✓ Escherichia_coli/
+      ✓ experimental_data.npz
+      ✓ experimental_data_tca.npz
+      ✓ parameters.py (if exists)
+    ✓ Bacillus_subtilis/
+      ✓ experimental_data.npz
+      ✓ experimental_data_tca.npz
+  ✓ PLANTS/
+    ✓ Arabidopsis_thaliana/
+      ✓ experimental_data.npz
+      ✓ experimental_data_tca.npz
+  ✓ FUNGI/
+    ✓ Saccharomyces_cerevisiae/
+      ✓ experimental_data_glycolysis.npz
+      ✓ experimental_data_tca.npz
+
+ADD THESE NEW FILES (GitHub Essentials):
+-----------------------------------------
+✓ README.md (download from outputs)
+✓ .gitignore (download from outputs)
+✓ requirements.txt (download from outputs)
+✓ LICENSE (optional - create MIT license)
+
+================================================================================
+STEP 3: CREATE EMPTY RESULTS FOLDER
+================================================================================
+
+In "MCEM Press Release" folder, create empty folder:
+  results/
+  └── .gitkeep (empty file to preserve folder in git)
+
+Or create a README.md inside results/:
+  results/
+  └── README.md
+
+Content:
+```markdown
+# Results Directory
+
+This directory will contain analysis outputs after running the framework.
+
+Generated session folders follow the pattern:
+`SessionN_AnalysisType_Organism_Mode/`
+
+Example:
+`Session1_CompleteAnalysis_Ecoli_TEST/`
+
+Each session folder contains:
+- parameter_estimation.npz
+- robustness.npz (if applicable)
+- bayesian_fispo.npz (if applicable)
+- visualizations/ (11 high-res PNG plots per organism)
+- data_exports/ (Excel & CSV files)
+```
+
+================================================================================
+STEP 4: DO NOT COPY THESE (LEAVE BEHIND)
+================================================================================
+
+❌ DO NOT COPY:
+---------------
+✗ results/ (all your Session* folders - personal data!)
+✗ Session*/ folders
+✗ visualizations/ folders
+✗ data_exports/ folders
+✗ *.png files (except if in docs/examples)
+✗ *.xlsx files
+✗ *.csv files (except examples)
+✗ *_backup.py files
+✗ *_old.py files
+✗ *_test.py files
+✗ __pycache__/ folders
+✗ *.pyc files
+✗ *.log files
+✗ *.tmp files
+✗ .vscode/ folder
+✗ .idea/ folder
+✗ Desktop.ini
+✗ Thumbs.db
+
+================================================================================
+STEP 5: OPTIONAL - ADD EXAMPLES FOLDER
+================================================================================
+
+Create: MCEM Press Release/examples/
+
+Add example outputs:
+  examples/
+  ├── example_visualization.png (1 sample plot)
+  ├── example_results.csv (small sample data)
+  └── README.md (explains what examples show)
+
+This helps users know what to expect!
+
+================================================================================
+STEP 6: OPTIONAL - ADD DOCS FOLDER
+================================================================================
+
+Create: MCEM Press Release/docs/
+
+Add documentation:
+  docs/
+  ├── methodology.md (detailed methodology)
+  ├── usage_guide.md (comprehensive usage)
+  ├── api_reference.md (code documentation)
+  └── images/ (screenshots, diagrams)
+
+================================================================================
+STEP 7: VERIFY FILE STRUCTURE
+================================================================================
+
+Your final structure should look like:
+
+MCEM Press Release/
+├── README.md
+├── .gitignore
+├── requirements.txt
+├── LICENSE (optional)
+├── Phase6_2.0_MAIN_WITH_TEST.py
+├── phase6_parameter_estimation.py
+├── phase6_robustness.py
+├── phase6_bayesian_fispo.py
+├── phase6_complete_analysis.py
+├── phase6_generate_report.py
+├── generate_thesis_visualizations.py
+├── export_data_tables.py
+├── glycolysis_model.py
+├── tca_model.py
+├── my_mcem_fixed.py
+├── kinetic_parameters.py
+├── add_true_params.py
+├── Bio-Database/
+│   ├── BACTERIA/
+│   │   ├── Escherichia_coli/
+│   │   │   ├── experimental_data.npz
+│   │   │   └── experimental_data_tca.npz
+│   │   └── Bacillus_subtilis/
+│   │       ├── experimental_data.npz
+│   │       └── experimental_data_tca.npz
+│   ├── PLANTS/
+│   │   └── Arabidopsis_thaliana/
+│   │       ├── experimental_data.npz
+│   │       └── experimental_data_tca.npz
+│   └── FUNGI/
+│       └── Saccharomyces_cerevisiae/
+│           ├── experimental_data_glycolysis.npz
+│           └── experimental_data_tca.npz
+├── results/
+│   └── README.md
+├── examples/ (optional)
+│   ├── example_plot.png
+│   └── README.md
+└── docs/ (optional)
+    └── methodology.md
+
+================================================================================
+STEP 8: TEST THE CLEAN FOLDER
+================================================================================
+
+Before uploading to GitHub, test that everything works:
+
+1. Open terminal in "MCEM Press Release" folder
+
+2. Install dependencies:
+   pip install -r requirements.txt
+
+3. Run test:
+   python Phase6_2.0_MAIN_WITH_TEST.py
+   Select: 1, 1, D, Y
+
+4. Verify:
+   ✓ Analysis runs without errors
+   ✓ Creates results folder
+   ✓ Generates visualizations
+   ✓ Generates data exports
+
+5. Delete the test results:
+   Delete: results/Session*/ (don't commit test results!)
+
+================================================================================
+STEP 9: INITIALIZE GIT REPOSITORY
+================================================================================
+
+1. Open terminal in "MCEM Press Release" folder
+
+2. Initialize git:
+   git init
+
+3. Add files:
+   git add .
+
+4. Check what will be committed:
+   git status
+
+5. Should see:
+   ✓ All .py files
+   ✓ Bio-Database/ files
+   ✓ README.md, .gitignore, requirements.txt
+   ✗ NO results/ folders
+   ✗ NO *.png files (unless in examples/)
+   ✗ NO *.xlsx files
+
+6. Create first commit:
+   git commit -m "Initial commit: MCEM parameter estimation framework"
+
+================================================================================
+STEP 10: CREATE GITHUB REPOSITORY
+================================================================================
+
+1. Go to: https://github.com/new
+
+2. Repository settings:
+   - Name: mcem-parameter-estimation
+   - Description: Multi-organism MCEM parameter estimation for metabolic pathways
+   - Public or Private: Your choice
+   - ✓ Skip README (you have one!)
+   - ✗ Skip .gitignore (you have one!)
+
+3. Create repository
+
+4. Follow GitHub's instructions to push:
+   git remote add origin https://github.com/yourusername/mcem-parameter-estimation.git
+   git branch -M main
+   git push -u origin main
+
+================================================================================
+STEP 11: VERIFY UPLOAD
+================================================================================
+
+1. Visit your GitHub repository
+
+2. Verify you see:
+   ✓ README.md displays properly
+   ✓ All Python files present
+   ✓ Bio-Database/ structure visible
+   ✓ requirements.txt works
+   ✗ NO personal results
+   ✗ NO large output files
+
+3. Test clone:
+   git clone https://github.com/yourusername/mcem-parameter-estimation.git test-clone
+   cd test-clone
+   pip install -r requirements.txt
+   python Phase6_2.0_MAIN_WITH_TEST.py
+
+================================================================================
+STEP 12: ADD GITHUB BADGES (OPTIONAL)
+================================================================================
+
+Add to top of README.md:
+
+![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![GitHub stars](https://img.shields.io/github/stars/yourusername/mcem-parameter-estimation.svg)
+![GitHub forks](https://img.shields.io/github/forks/yourusername/mcem-parameter-estimation.svg)
+
+================================================================================
+STEP 13: ADD TOPICS/TAGS
+================================================================================
+
+On GitHub repository page, add topics:
+- computational-biology
+- parameter-estimation
+- mcem
+- metabolic-pathways
+- glycolysis
+- tca-cycle
+- bioinformatics
+- systems-biology
+- thesis
+- python
+
+================================================================================
+CHECKLIST FOR GITHUB UPLOAD
+================================================================================
+
+Before pushing to GitHub, verify:
+
+FILE STRUCTURE:
+✓ All essential .py files copied
+✓ Bio-Database/ structure present
+✓ README.md, .gitignore, requirements.txt added
+✓ results/ folder empty (or has README.md only)
+✓ No personal data included
+
+CODE QUALITY:
+✓ All scripts run without errors
+✓ Test mode works (D)
+✓ No hardcoded personal paths
+✓ No API keys or credentials
+
+DOCUMENTATION:
+✓ README.md is comprehensive
+✓ requirements.txt lists all dependencies
+✓ .gitignore excludes results/outputs
+✓ Comments in code are clear
+
+TESTING:
+✓ Clean install works
+✓ Dependencies install correctly
+✓ Test run completes successfully
+✓ No missing imports
+
+================================================================================
+ESTIMATED TIME: ~30-45 MINUTES
+================================================================================
+
+This cleanup process should take about 30-45 minutes total:
+- Step 1-2: Copy files (10 min)
+- Step 3-6: Setup folders (5 min)
+- Step 7-8: Verify & test (10 min)
+- Step 9-11: Git setup & upload (10 min)
+- Step 12-13: Polish (5 min)
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Issue: Git won't ignore results/ folder
+Fix: Make sure .gitignore is in root folder, check syntax
+
+Issue: Files too large for GitHub (>100MB)
+Fix: Remove large .npz files, use Git LFS if needed
+
+Issue: Missing dependencies on fresh install
+Fix: Update requirements.txt with all imports
+
+Issue: Test run fails after copying
+Fix: Check all .py files copied correctly, verify Bio-Database/ paths
+
+================================================================================
+FINAL NOTES
+================================================================================
+
+✓ Your original "Phase 6 2.0" folder stays untouched
+✓ "MCEM Press Release" is the clean GitHub version
+✓ Update README.md with your actual name/email
+✓ Add LICENSE file (MIT recommended)
+✓ Consider adding a CHANGELOG.md for updates
+
+================================================================================
+READY TO UPLOAD!
+================================================================================
+
+Once you complete these steps, your repository will be:
+- Clean and professional
+- Well-documented
+- Easy for others to use
+- Perfect for your thesis defense
+- Ready to share with the world!
+
+Good luck! 🚀
+================================================================================

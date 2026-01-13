@@ -1,0 +1,236 @@
+# ============================================================================
+# MCEM PARAMETER ESTIMATION - GIT IGNORE FILE
+# ============================================================================
+
+# ============================================================================
+# RESULTS & OUTPUTS (DO NOT COMMIT PERSONAL RESULTS!)
+# ============================================================================
+
+# All result sessions
+results/
+Session*/
+
+# Generated visualizations
+visualizations/
+*.png
+!docs/*.png
+!examples/*.png
+
+# Generated data exports
+data_exports/
+*.xlsx
+*.csv
+!examples/*.csv
+
+# Generated reports
+COMPARATIVE_REPORT.txt
+*.txt.backup
+
+# NPZ result files
+*.npz
+!Bio-Database/**/*.npz
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ============================================================================
+# DEVELOPMENT & EDITORS
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# BACKUP & TEMPORARY FILES
+# ============================================================================
+
+# Backup files
+*_backup.py
+*_backup.npz
+*_old.py
+*_test.py
+*.bak
+*.backup
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================================================
+# DATA (KEEP STRUCTURE, IGNORE LARGE DATA)
+# ============================================================================
+
+# Large experimental data (keep examples only)
+Bio-Database/**/*.xml
+Bio-Database/**/*.sbml
+!Bio-Database/**/README.md
+!Bio-Database/**/example_*.npz
+
+# ============================================================================
+# DOCUMENTATION (KEEP GENERATED DOCS)
+# ============================================================================
+
+# Keep documentation
+!docs/
+!*.md
+!LICENSE
+
+# ============================================================================
+# EXAMPLES (KEEP SMALL EXAMPLES)
+# ============================================================================
+
+# Keep example data
+!examples/
+!examples/**/*
+
+# ============================================================================
+# BATCH FILES & SCRIPTS
+# ============================================================================
+
+# Keep batch files but ignore logs
+*.bat.log
+run_*.log
+
+# ============================================================================
+# MISC
+# ============================================================================
+
+# Ignore .env files (if any contain API keys)
+*.env
+*.env.*
+
+# Ignore large files (GitHub limit is 100MB)
+*.h5
+*.hdf5
+*.mat
+
+# Ignore compressed archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================================================
+# PROJECT-SPECIFIC
+# ============================================================================
+
+# Session-specific ignore
+Session[0-9]*/
+Session[0-9][0-9]*/
+
+# Test outputs
+test_outputs/
+debug_*/
+
+# Profiling
+*.prof
+*.lprof
+
+# ============================================================================
+# KEEP THESE (EXPLICITLY NOT IGNORED)
+# ============================================================================
+
+# Force include important files even if matched above
+!requirements.txt
+!README.md
+!LICENSE
+!.gitignore
+!Phase6_2.0_MAIN_WITH_TEST.py
+!**/SKILL.md
+
+# ============================================================================
